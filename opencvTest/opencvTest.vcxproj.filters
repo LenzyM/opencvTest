@@ -24,9 +24,6 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="KMeansStitch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="threshold.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -37,9 +34,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ContourInterface.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DetectUtils.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

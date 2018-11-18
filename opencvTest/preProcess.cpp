@@ -471,27 +471,3 @@ void testBiggest(char *path)
 	cv::waitKey(0);
 	return;
 }
-void mser(Mat gray)
-{
-	cv::Ptr<cv::MSER> mesr1 = cv::MSER::create(2, 30, 5000, 0.5, 0.3);
-	std::vector<std::vector<cv::Point> > regContours;
-	std::vector<cv::Rect> bboxes1;
-	mesr1->detectRegions(gray, regContours, bboxes1);//gray为处理的图像，为单通道灰度图
-	cv::Mat mserMapMat = cv::Mat::zeros(gray.size(), CV_8UC1);
-	for (int i = (int)regContours.size() - 1; i >= 0; i--)
-	{
-		// 根据检测区域点生成mser+结果
-		const std::vector<cv::Point>& r = regContours[i];
-		for (int j = 0; j < (int)r.size(); j++)
-		{
-			cv::Point pt = r[j];
-			mserMapMat.at<unsigned char>(pt) = 255;
-		}
-	}
-	imshow("mser", mserMapMat);
-	waitKey(0);
-
-}
-void test1()
-{
-}

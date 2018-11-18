@@ -152,8 +152,6 @@
     <ClCompile Include="CannyContours.cpp" />
     <ClCompile Include="colorRec.cpp" />
     <ClCompile Include="ContourInterface.cpp" />
-    <ClCompile Include="DetectUtils.cpp" />
-    <ClCompile Include="KMeansStitch.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="preProcess.cpp" />
     <ClCompile Include="SegmentTest.cpp" />

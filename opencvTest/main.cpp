@@ -9,7 +9,11 @@ int main()
 		sprintf(path, "C:/Users/Administrator/Desktop/AboutCV/UAV Pic/%d.jpg", i);
 		//detectContours(path, 50);
 		//testBiggest(path);
-		cv::Mat = imread();
+		cv::Mat img=cv::imread(path);
+		ContourAndColor cac;
+		cac=ContourAndColorDetect(img);
+		std::cout << cac.color << std::endl;
+		cv::imshow("show", cac.map);
 		getchar();
 
 	}

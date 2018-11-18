@@ -5,6 +5,11 @@
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
 //#include "opencv2/core/mat.hpp"
+typedef struct
+{
+	cv::Mat map;
+	std::string color;
+}ContourAndColor;
 void testfunc();
 void func(char*);
 void funcThreshold(char* path);
@@ -16,11 +21,6 @@ cv::Mat outerContours(cv::Mat img);
 cv::Mat addContours(cv::Mat img, cv::Mat map);
 cv::Mat FindMyContours(cv::Mat img);
 void testBiggest(char *path);
-void mser(cv::Mat gray);
 std::string colorTest(cv::Mat img, cv::Mat map);
-void test1();
-typedef struct contourAndColor
-{
-	cv::Mat map;
-	std::string color;
-}ContourAndColor;
+std::vector<cv::Point> findBiggestContour(cv::Mat binary_image);
+ContourAndColor ContourAndColorDetect(cv::Mat src);
